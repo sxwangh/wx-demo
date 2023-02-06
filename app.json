@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/second/second"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff9432",
+    "navigationBarTitleText": "wsx Demo",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

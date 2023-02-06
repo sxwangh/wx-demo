@@ -1,0 +1,43 @@
+<view>
+  <!-- navigator相当于<a> -->
+  <navigator url="../second/second">前往第二页</navigator>
+  <open-data type="userAvatarUrl"></open-data>
+  <open-data type="userNickName"></open-data>
+  <text class="title">hello {{name}}</text>
+  <!-- open-type属性，指定按钮用于获取用户信息 getuserinfo(event)中有用户信息-->
+  <button open-type="getUserInfo" bind:getuserinfo="getuserinfoButton">
+    授权获取个人信息
+  </button>
+  <hr/>
+  <text class="title">{{curPageName}}: {{count}}</text>
+  <button class="weui-btn weui-btn_primary" bind:tap="handelTapButton">
+    count + 1
+  </button>
+  <button class="weui-btn weui-btn_primary weui-btn_loading">
+    <i class="weui-loading"></i>正在加载
+  </button>
+  <button class="weui-btn weui-btn_disabled weui-btn_primary">
+    禁止点击
+  </button>
+  <span wx:for="{{items}}" wx:key="index">
+    {{index}}、 {{item}}
+   </span>
+  <!-- <image
+    src="https://picsum.photos/200"
+    style="height: 375rpx; width: 375rpx;"
+  ></image> -->
+  <swiper
+    indicator-dots="{{true}}"  
+    autoplay="{{true}}"
+    style="width: 750rpx;">
+    <swiper-item>
+      <image src="https://picsum.photos/200"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://picsum.photos/250"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://picsum.photos/300"></image>
+    </swiper-item>
+  </swiper>
+</view>
